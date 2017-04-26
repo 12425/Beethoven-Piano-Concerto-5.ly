@@ -3,6 +3,7 @@
 \paper
 {
   #(set-paper-size "a4")
+  min-systems-per-page = #6
   ragged-last-bottom = ##f
   ragged-right = ##f
 }
@@ -21,7 +22,6 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
 
 \header
 {
-  % title = "Concert V - III"
   tagline = ##f
   piece = \markup { \hspace #14.4 "RONDO." }
 }
@@ -231,8 +231,8 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
       % 61
       c ( b ) aes-. g4 g8 |
       < g c ees g >4. \f < g' g' >8-. < f f' >-. < ees ees' >-. |
-      < d d' > ( < c c' > ) < b b' >-. < c c' >4 \( < d d' >8 |
-      < ees ees' >-. \) < g g, > ( < a a, > < bes d, bes >4 < c f, c >8 ) |
+      < d d' > ( < c c' > ) < b b' >-. < c c' >4 ( < d d' >8 |
+      < ees ees' >-. ) < g g, > ( < a a, > < bes d, bes >4 < c f, c >8 ) |
       < c f, c >4 r8 \SOLO < ees ees, >-. _\markup { \dynamic p \italic "poco rit." } < d d, >-. < c c, >-. |
       % 66
       < bes bes, > ( < a a, > ) < g g, >-. < f f, >4 < f f, >8 |
@@ -285,7 +285,7 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
       ees, \p ees' d, _\markup \italic "poco ritard." d' des, des' c, c' ces, ces' bes, bes' |
       <<
         {
-          bes8 \f ^\markup "a tempo" ( [ ees ] ) ees ( [ g ] ) b,\rest g'16 ( bes ) |
+          bes8 ( [ \f \tempo "a tempo" ees ] ) ees ( [ g ] ) b,\rest g'16 ( bes ) |
           bes ( ees ) ees4~ \sf ees ees16 ( g ) |
           % 96
           f8 \p b,,\rest d'16 ( [ f ] ) ees8 b,\rest g'16 ( bes ) |
@@ -373,7 +373,7 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
       f g b d f, g b d f, g b d |
       f, \DIM g b d f, g b d f, g b d |
       % 136
-      f, _\markup { \dynamic p \italic "piu piano" } g b d f, g b d f, g b d |
+      f, _\markup { \dynamic p \italic "più piano" } g b d f, g b d f, g b d |
       f, \pp [ g b d ] \tuplet 3/2 8 { f, g b } \acciaccatura { f16 g b } d8 r \N g,, |
       <<
         {
@@ -430,8 +430,8 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
       % 161
       \SOLO r4 r8 r4 ees8 \pp |
       ees ( [ aes ] ) aes ( [ c ] ) r \U c16 ( ees ) |
-      ees ( aes ) aes4~ aes \afterGrace aes8 \( \trill { g16 aes } |
-      c8 bes aes g f ees \) |
+      ees ( aes ) aes4~ aes \afterGrace aes8 ( \trill { g16 aes } |
+      c8 bes aes g f ees ) |
       ees16 f ees d ees e f ges g aes \tuplet 3/2 8 { a [ bes b ] } |
       % 166
       c b bes a aes g ges f e ees d ees |
@@ -774,7 +774,7 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
           \once \override AccidentalSuggestion.font-size = #-3
           \once \override AccidentalSuggestion.script-priority = #-1
           \single \hideNotes
-          a,8-\turn \noBeam
+          a,8 \turn \noBeam
         }
       >> |
       < aes' bes d f aes >4 \arpeggio \ff r8 r4 r8 |
@@ -783,9 +783,9 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
       < bes g e c bes >4 \arpeggio \ff r8 \TUTTI < bes bes, >-. \p < aes aes, >-. < g g, >-. |
       < f f, > ( < e e, > ) < des des, >-. < c c, >4 < c c, >8 |
       < c f c' >4 \f r8 < c c' >-. < bes bes' >-. < aes aes' >-. |
-      < g g' > ( < f f' > ) < e e' >-. < f f' >4 \( < g g' >8 |
+      < g g' > ( < f f' > ) < e e' >-. < f f' >4 ( < g g' >8 |
       % 311
-      < aes aes' >-. \) < c aes c, > ( < d f, d > < ees g, ees >4 < f d bes f >8 ) \break |
+      < aes aes' >-. ) < c aes c, > ( < d f, d > < ees g, ees >4 < f d bes f >8 ) \break |
       < f d bes f >4 r8 \SOLO < aes aes' >-. _\markup { \dynamic p \italic "poco ritard." } < g g' >-. < f f' >-. |
       < ees ees' > ( < d d' > ) < c c' >-. < bes bes' >4 < bes bes' >8 |
       \TUTTI < bes e bes' >4 \f r8 \SOLO < bes' bes' >-. _\markup { \dynamic p \italic "poco ritard." } < aes aes' >-. < g g' >-. |
@@ -951,7 +951,7 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
           < ees ees, >4. ( < g g, >4 < f f, >8 )
         }
         {
-          s4 s8\turn s4.
+          s4 s8 \turn s4.
         }
       >> |
       < ees ees, >4 \N \TUTTI ees,,8 \f
@@ -1028,7 +1028,7 @@ LSHIFT = \once \override NoteColumn.force-hshift = #-0.5
         }
       >>
       r4 r8 |
-      \tempo "Piu allegro."
+      \tempo "Più allegro."
       \LEFT \stemUp ees16 ^\f f g aes bes c \RIGHT \stemNeutral d \sf ees d c bes a |
       bes c d ees f g aes \sf bes aes g \tuplet 3/2 8 { f [ ees d ] } |
       % 421

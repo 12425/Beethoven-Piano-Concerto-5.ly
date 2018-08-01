@@ -234,9 +234,9 @@ RSHIFT = \once \override NoteColumn.force-hshift = #1.3
       fis, ) dis' ( b ) dis ( g, ) e' ( b ) e ( fis, ) e' ( cis ) e ( fis, ) e' ( cis ) e ( |
       % 76
       fis, _\markup \italic "sempre più dim." ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( b, ) fis' ( dis ) fis ( fis, ) dis' ( b ) dis ( |
-      dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \phrasingSlurUp fis ( \LEFT \stemUp fis, ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( |
-      b, ^\markup \italic morend ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( |
-      b,8 ) s2.. |
+      dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \slurUp fis ( \LEFT \stemUp fis, ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( |
+      b, ^\markup \italic morendo ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( |
+      b,8 ) \slurNeutral s2.. |
       \RIGHT r2 r4 r8 r16 bes'' \pp |
       % 81
       <<
@@ -480,10 +480,10 @@ RSHIFT = \once \override NoteColumn.force-hshift = #1.3
           fis, ) dis' ( b ) dis ( g, ) e' ( b ) e ( fis, ) e' ( cis ) e ( fis, ) e' ( cis ) e ( |
           fis, ) dis' ( b ) dis ( g, ) e' ( b ) e ( fis, ) e' ( cis ) e ( fis, ) e' ( cis ) e ( |
           % 76
-          fis, \sustainOn ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \phrasingSlurDown fis ( \BASS fis, ) \phrasingSlurNeutral dis' ( b ) dis ( |
-          dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \phrasingSlurDown fis ( \stemDown fis, ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( |
+          fis, \sustainOn ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \slurDown fis ( \BASS fis, ) \slurNeutral dis' ( b ) dis ( |
+          dis, ) b' ( fis ) b ( b, ) fis' ( dis ) \slurDown fis ( \stemDown fis, ) dis' ( b ) dis ( dis, ) b' ( fis ) b ( |
           b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( b, ) fis' ( dis ) fis ( |
-          b,8 ) r8 \sustainOff r4 r2
+          b,8 ) \slurNeutral r8 \sustainOff r4 r2
         } \\
         {
           \TUTTI
